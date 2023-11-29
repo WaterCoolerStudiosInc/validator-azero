@@ -1,4 +1,4 @@
-name: Build and Deploy Docker Container
+name: Build and Deploy Aleph Kintsu Node to AWS 
 
 on: [ push ]
 
@@ -12,7 +12,7 @@ jobs:
 
     - name: Install Dependencies
       run: |
-        sudo apt-get update
+        sudo apt-get update -y
         sudo apt-get install -y build-essential curl git clang libclang-dev pkg-config libssl-dev protobuf-compiler
         curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
         source "$HOME/.cargo/env"
